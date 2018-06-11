@@ -18128,7 +18128,7 @@ var DefaultUI = function () {
         eventManager: this._editor.eventManager,
         $button: this.$el.find('button.tui-table'),
         css: {
-          'position': 'fixed'
+          'position': 'absolute'
         }
       }));
     }
@@ -18140,7 +18140,7 @@ var DefaultUI = function () {
         eventManager: this._editor.eventManager,
         $button: this.$el.find('button.tui-heading'),
         css: {
-          'position': 'fixed'
+          'position': 'absolute'
         }
       }));
     }
@@ -20887,7 +20887,11 @@ var PopupAddTable = function (_LayerPopup) {
 
       this._eventManager.listen('openPopupAddTable', function () {
         var $button = _this3._$button;
-        var offset = $button.offset();
+        var offset = {
+          top: $button[0].offsetTop,
+          left: $button[0].offsetLeft
+        };
+
         _this3.$el.css({
           top: offset.top + $button.outerHeight(),
           left: offset.left
@@ -21317,7 +21321,10 @@ var PopupAddHeading = function (_LayerPopup) {
       this._eventManager.listen('closeAllPopup', this.hide.bind(this));
       this._eventManager.listen('openHeadingSelect', function () {
         var $button = _this3._$button;
-        var offset = $button.offset();
+        var offset = {
+          top: $button[0].offsetTop,
+          left: $button[0].offsetLeft
+        };
 
         _this3.$el.css({
           top: offset.top + $button.outerHeight(),
