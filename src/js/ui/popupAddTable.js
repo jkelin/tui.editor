@@ -143,7 +143,7 @@ class PopupAddTable extends LayerPopup {
       const $button = this._$button;
       const offset = {
         top: $button[0].offsetTop,
-        left: $button[0].offsetLeft,
+        left: $button[0].offsetLeft
       };
 
       this.$el.css({

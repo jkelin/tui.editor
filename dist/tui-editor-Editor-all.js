@@ -24700,7 +24700,7 @@ var DefaultUI = function () {
     key: '_initPopupAddTable',
     value: function _initPopupAddTable() {
       this._popups.push(new _popupAddTable2.default({
-        $target: this.$el,
+        $target: this._toolbar.$el,
         eventManager: this._editor.eventManager,
         $button: this.$el.find('button.tui-table'),
         css: {
@@ -24712,7 +24712,7 @@ var DefaultUI = function () {
     key: '_initPopupAddHeading',
     value: function _initPopupAddHeading() {
       this._popups.push(new _popupAddHeading2.default({
-        $target: this.$el,
+        $target: this._toolbar.$el,
         eventManager: this._editor.eventManager,
         $button: this.$el.find('button.tui-heading'),
         css: {
